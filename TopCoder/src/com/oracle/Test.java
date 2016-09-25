@@ -12,6 +12,7 @@ public class Test {
 
 
     public static void main(String[] args) {
+
         try {
             String dbURL = "jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=ndc-vedip1.walmart.com)(PORT=1521)))(CONNECT_DATA=(SERVICE_NAME=edip1)))";
             String strUserID = "integration_user";
@@ -29,6 +30,18 @@ public class Test {
 
         } catch (Exception e) {
             System.out.println(e);
+        }
+
+       // find();
+    }
+
+    private static void find() {
+        while(true){
+            try {
+                throw  new RuntimeException();
+            }catch (RuntimeException ex){
+                ex.printStackTrace();
+            }
         }
     }
 }
